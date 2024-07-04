@@ -1,0 +1,19 @@
+service: email-sender
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+  environment:
+    SES_REGION: us-east-1
+
+plugins:
+  - serverless-offline
+
+functions:
+  sendEmail:
+    handler: handler.sendEmail
+    events:
+      - http:
+          path: send-email
+          method: post
