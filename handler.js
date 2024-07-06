@@ -14,7 +14,7 @@ module.exports.sendEmail = async (event) => {
     }
 
     const params = {
-      Source: 'praveenraj22072002@gmail.com', // Replace with a verified SES email
+      Source: 'praveenraj@gmail.com', // Replace with a verified SES email
       Destination: {
         ToAddresses: [receiver_email], // Replace with receiver_email
       },
